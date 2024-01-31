@@ -138,6 +138,11 @@ typedef struct {
     bdaddr_t addr;
 } __attribute__ ((packed)) uim_bdaddr_change_cmd;
 
+typedef char bdstr_t[18];
+
+/* BD address as string and a pointer to array of hex bytes */
+bdaddr_t bd_addr;
+
 /* Sys_fs entry. The Line discipline driver sets this to 1 when bluedroid open BT protocol driver */
 /* Note: This entry is used in bt_hci_bdroid.c (Android source). Also present in
  *  brcm_sh_ldisc.c (v4l2_drivers) and board specific file (android kernel source) */
@@ -182,7 +187,7 @@ int st_uart_config(unsigned char install);
 int proc_hci_reset();
 extern int upio_set_bluetooth_power(int on);
 int proc_hci_uartclockset();
-void read_default_bdaddr();
+void read_default_bdaddr(bdaddr_t *bdaddr);
 int proc_bdaddr();
 
 #endif /* UIM_H */

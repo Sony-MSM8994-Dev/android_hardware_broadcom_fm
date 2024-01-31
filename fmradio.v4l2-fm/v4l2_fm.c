@@ -24,7 +24,7 @@
 #define ALOGI printf
 #define ALOGE printf
 #else
-#include "utils/Log.h"
+#include <log/log.h>
 #endif
 
 #include <stdio.h>

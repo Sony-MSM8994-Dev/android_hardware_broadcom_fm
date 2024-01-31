@@ -14,7 +14,7 @@ LOCAL_SRC_FILES:= \
     btsnoop.c \
     utils.c
 
-LOCAL_CFLAGS:= -c -W -Wall -O2 -D_POSIX_SOURCE -DUIM_DEBUG -DBLUEDROID_ENABLE_V4L2
+LOCAL_CFLAGS:= -c -W -Wall -O2 -D_POSIX_SOURCE -DUIM_DEBUG -DBLUEDROID_ENABLE_V4L2 -Werror -Wdeprecated-non-prototype
 LOCAL_SHARED_LIBRARIES:= libnetutils libcutils liblog
 
 SYSFS_PREFIX := "/sys/bus/platform/drivers/bcm_ldisc/bcmbt_ldisc.93/"
